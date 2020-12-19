@@ -1,0 +1,14 @@
+
+
+{% extends "base.html" %}
+{% load static %}
+{% include 'base/navbar.html' with brand_name='aaa' %}
+
+{% block content %}
+<h2> Reister </h2>
+<form method='POST'>
+  {% csrf_token %}
+    {{ form }}
+    <button type='submit' class='btn btn-default'>sumbit</button>
+</form>
+d{% endblock %}
